@@ -1,0 +1,51 @@
+#clock { 
+    width: 400px;
+    height: 400px;
+    background-image: url(relogio.jpg);
+    margin: 20px auto;
+    border: 10px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+#hours {
+    width: 8px;
+    height: 120px;
+    background-color: black;
+    margin-left: 196px;
+    margin-top: 80px;
+    position: absolute;
+    animation: rotate 43200s infinite linear;
+}
+
+#minutes {
+    width: 6px;
+    height: 140px;
+    background-color: yellow;
+    margin-left: 197px;
+    margin-top: 60px; 
+    position: absolute;
+    animation: rotate 3600s infinite linear;
+}
+
+#seconds {
+    width: 4px;
+    height: 180px;
+    background-color: red;
+    margin-left: 198px;
+    margin-top: 20px;
+    position: absolute;
+    animation: rotate 60s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+        transform-origin: center bottom;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: center bottom;
+    }
+}
